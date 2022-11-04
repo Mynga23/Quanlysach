@@ -1,0 +1,72 @@
+<%= form_with(model: hocsinhsach) do |form| %>
+  <% if hocsinhsach.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(hocsinhsach.errors.count, "error") %> prohibited this hocsinhsach from being saved:</h2>
+
+      <ul>
+        <% hocsinhsach.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :IdStudent_241, style: "display: block" %>
+    <%= form.text_field :IdStudent_241 %>
+  </div>
+
+  <div>
+    <%= form.label :NameStudent_241, style: "display: block" %>
+    <%= form.text_field :NameStudent_241 %>
+  </div>
+
+  <div>
+    <%= form.label :RoomStudent_241, style: "display: block" %>
+    <%= form.text_field :RoomStudent_241 %>
+  </div>
+
+  <div>
+    <%= form.label :IdBook_241, style: "display: block" %>
+    <%= form.text_field :IdBook_241 %>
+  </div>
+
+  <div>
+    <%= form.label :NameBook_241, style: "display: block" %>
+    <%= form.text_field :NameBook_241 %>
+  </div>
+
+  <div>
+    <%= form.label :Author_241, style: "display: block" %>
+    <%= form.text_field :Author_241 %>
+  </div>
+
+  <div>
+    <%= form.label :Category_241, style: "display: block" %>
+    <%= form.text_field :Category_241 %>
+  </div>
+
+  <div>
+    <%= form.label :IDBM_241, style: "display: block" %>
+    <%= form.text_field :IDBM_241 %>
+  </div>
+
+  <div>
+    <%= form.label :DateBorrow_241, style: "display: block" %>
+    <%= form.text_field :DateBorrow_241 %>
+  </div>
+
+  <div>
+    <%= form.label :DateBack_241, style: "display: block" %>
+    <%= form.text_field :DateBack_241 %>
+  </div>
+
+  <div>
+    <%= form.label :NumberDate_241, style: "display: block" %>
+    <%= form.text_field :NumberDate_241 %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,53 @@
+
+<div id="hocsinhsaches">
+  <% @hocsinhsaches.each do |hocsinhsach| %>
+    <%= render hocsinhsach %>
+    <p>
+      <%= link_to "Hiển thị", hocsinhsach %>
+      <%# <%= link_to "Show this hocsinhsach", hocsinhsach %> 
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Thêm", new_hocsinhsach_path %>
+<p style="color: green"><%= notice %></p>
+<h1>QUẢN LÝ CHO HỌC SINH MƯỢN SÁCH</h1>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Mã HS</th>
+      <th scope="col">Họ và tên</th>
+      <th scope="col">Lớp</th>
+      <th scope="col">Mã Sách</th>
+      <th scope="col">Tên Sách</th>
+      <th scope="col">Tên tác giả</th>
+      <th scope="col">Tủ sách</th>
+      <th scope="col">Số BM</th>
+      <th scope="col">Ngày mượn</th>
+      <th scope="col">Ngày trả</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+     <% @hocsinhsaches.each do |hocsinhsach| %>
+  <tr>
+    <td><%= hocsinhsaches.idstudent_241 %></td>
+    <td><%= hocsinhsaches.namestudent_241 %></td>
+    <td><%= hocsinhsaches.roomstudent_241 %></td>
+    <td><%= hocsinhsaches.idbook_241 %></td>
+    <td><%= hocsinhsaches.namebook_string %></td>
+    <td><%= hocsinhsaches.author_241 %></td>
+    <td><%= hocsinhsaches.category_241 %></td>
+    <td><%= hocsinhsaches.idBM_241 %></td>
+    <td><%= hocsinhsaches.dateBorrow_241 %></td>
+    <td><%= hocsinhsaches.dateBack_241 %></td>
+
+    <td>
+      <%= link_to "Hiển thị", hocsinhsach, class:'btn btn-info' %>
+    </td>
+    <% end %>
+  </tr>
+  </tbody>
+</table>
+<%= link_to "Thêm", new_hocsinhsach_path %>

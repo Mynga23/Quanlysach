@@ -1,0 +1,2 @@
+class Hocsinhsach < ApplicationRecord
+end
